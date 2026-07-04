@@ -216,7 +216,13 @@ async function main() {
     const res = await fetch(DATA_URL, { cache: "no-cache" });
     data = await res.json();
   } catch (err) {
-    document.getElementById("name").textContent = "Failed to load data.json";
+    const isFileProtocol = location.protocol === "file:";
+    document.getElementById("name").textContent = isFileProtocol
+      ? "Can't load data.json when opened as a local file"
+      : "Failed to load data.json";
+    document.getElementById("tagline").textContent = isFileProtocol
+      ? "Browsers block fetch() for file:// pages. Run a local server instead, e.g. `python3 -m http.server` in this folder, then open http://localhost:8000/."
+      : "";
     console.error(err);
     return;
   }

@@ -302,7 +302,16 @@ def compile_pdf(tex_source, output_pdf):
                 if log.exists():
                     print(log.read_text(encoding="utf-8", errors="ignore")[-4000:])
                 raise RuntimeError("pdflatex failed, see log above")
-        shutil.copy(tmp / "cv.pdf", output_pdf)
+        try:
+            shutil.copy(tmp / "cv.pdf", output_pdf)
+        except PermissionError:
+            fallback = output_pdf.with_name(output_pdf.stem + ".new" + output_pdf.suffix)
+            shutil.copy(tmp / "cv.pdf", fallback)
+            print(
+                f"WARNING: {output_pdf} is locked (likely open in a viewer or "
+                f"syncing). Wrote {fallback} instead -- close the original "
+                f"file and rename {fallback.name} to {output_pdf.name}."
+            )
 
 
 def main():

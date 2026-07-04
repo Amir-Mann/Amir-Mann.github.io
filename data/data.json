@@ -2,7 +2,7 @@
   "name": "Amir Mann",
   "tagline": "M.Sc. student in Computer Science at the Technion, working on 3D generative AI and human motion generation.",
   "email": "amirmann99@gmail.com",
-  "phone": "052-2812743",
+  "phone": "+972-52-2812743",
   "photo": "assets/img/profile.jpg",
   "links": {
     "scholar": "https://scholar.google.com/citations?user=CNQcZjwAAAAJ&hl=en",
@@ -56,7 +56,7 @@
     {
       "title": "VideoMDM: Towards 3D Human Motion Generation From 2D Supervision",
       "authors": ["A. Mann", "G. M. Harari", "O. Litany"],
-      "venue": "Manuscript under review at NeurIPS",
+      "venue": "Preprint",
       "year": "2026",
       "links": {
         "arxiv": "",
@@ -66,7 +66,7 @@
     {
       "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
       "authors": ["A. Cohen Rimon", "A. Mann", "M. Ben Chen", "O. Litany"],
-      "venue": "Manuscript under review at ECCV",
+      "venue": "ECCV",
       "year": "2026",
       "links": {
         "arxiv": "",

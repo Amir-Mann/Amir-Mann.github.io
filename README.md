@@ -19,6 +19,10 @@ No HTML/CSS/LaTeX editing required for routine updates.
 
 ## Local development
 
+Don't open `index.html` by double-clicking it — browsers block `fetch()`
+from reading local files over `file://`, so `data.json` won't load and
+you'll see an error on the page. Serve it over HTTP instead:
+
 ```bash
 # serve the site locally
 python3 -m http.server 8000
@@ -27,6 +31,9 @@ python3 -m http.server 8000
 # regenerate the CV PDF (requires a TeX Live install: pdflatex)
 python3 cv/generate_cv.py
 ```
+
+Once pushed to GitHub Pages this isn't an issue — Pages serves over
+`https://`, where `fetch()` works normally.
 
 ## Structure
 
