@@ -57,7 +57,10 @@
       "authors": ["A. Mann", "G. M. Harari", "O. Litany"],
       "venue": "Manuscript under review at NeurIPS",
       "year": "2026",
-      "links": {}
+      "links": {
+        "arxiv": "",
+        "project": "https://videomdm.github.io/"
+      }
     },
     {
       "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
@@ -66,7 +69,7 @@
       "year": "2026",
       "links": {
         "arxiv": "",
-        "project": ""
+        "project": "https://avigailco.github.io/SpectralSplats/"
       }
     },
     {
@@ -77,7 +80,7 @@
       "year": "2026",
       "links": {
         "arxiv": "",
-        "project": ""
+        "project": "https://time-to-move.github.io/"
       }
     }
   ],

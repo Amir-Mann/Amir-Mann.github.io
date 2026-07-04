@@ -20,8 +20,12 @@ function linkLabel(key) {
     github: "GitHub",
     linkedin: "LinkedIn",
     cv: "CV (PDF)",
+    arxiv: "arXiv",
+    project: "Project Page",
+    code: "Code",
+    pdf: "PDF",
   };
-  return labels[key] || key;
+  return labels[key] || (key[0].toUpperCase() + key.slice(1));
 }
 
 function renderHeader(data) {
@@ -142,7 +146,7 @@ function renderPublications(data) {
     if (links.length) {
       const linksWrap = el("div", { className: "pub-links" });
       for (const [key, url] of links) {
-        linksWrap.appendChild(el("a", { text: key[0].toUpperCase() + key.slice(1) }).also(a => {
+        linksWrap.appendChild(el("a", { text: linkLabel(key) }).also(a => {
           a.href = url;
           a.target = "_blank";
           a.rel = "noopener";
@@ -173,7 +177,7 @@ function renderProjects(data) {
     if (links.length) {
       const linksWrap = el("div", { className: "pub-links" });
       for (const [key, url] of links) {
-        linksWrap.appendChild(el("a", { text: key[0].toUpperCase() + key.slice(1) }).also(a => {
+        linksWrap.appendChild(el("a", { text: linkLabel(key) }).also(a => {
           a.href = url;
           a.target = "_blank";
           a.rel = "noopener";
