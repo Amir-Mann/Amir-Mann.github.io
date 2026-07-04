@@ -5,9 +5,10 @@
   "phone": "052-2812743",
   "photo": "assets/img/profile.jpg",
   "links": {
-    "scholar": "https://scholar.google.com/citations?user=REPLACE_ME",
+    "scholar": "https://scholar.google.com/citations?user=CNQcZjwAAAAJ&hl=en",
     "github": "https://github.com/Amir-Mann",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/amir-mann-research/",
+    "twitter": "https://x.com/mann_amir_",
     "cv": "cv/Amir_Mann_CV.pdf"
   },
   "bio": "I am an M.Sc. student in Computer Science at the Technion — Israel Institute of Technology, working in LitLab under the advisement of Dr. Or Litany. My research focuses on 3D generative AI and human motion generation from 2D supervision, including alternatives to diffusion supervision and diffusion guidance, working with cameras, SMPL-X, depth, and 3D Gaussian Splatting.",

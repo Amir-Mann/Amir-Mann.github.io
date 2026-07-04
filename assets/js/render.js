@@ -19,6 +19,7 @@ function linkLabel(key) {
     scholar: "Google Scholar",
     github: "GitHub",
     linkedin: "LinkedIn",
+    twitter: "X",
     cv: "CV (PDF)",
     arxiv: "arXiv",
     project: "Project Page",

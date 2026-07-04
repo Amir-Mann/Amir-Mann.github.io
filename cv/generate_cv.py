@@ -28,6 +28,7 @@ LINK_LABELS = {
     "scholar": "Google Scholar",
     "github": "GitHub",
     "linkedin": "LinkedIn",
+    "twitter": "X",
     "arxiv": "arXiv",
     "project": "Project Page",
     "code": "Code",
