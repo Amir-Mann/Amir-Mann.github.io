@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amir Mann</title>
+<meta name="description" content="Amir Mann — M.Sc. student, Technion. Publications, research, and CV.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <img id="photo" class="photo" alt="" hidden>
+      <div class="header-text">
+        <h1 id="name">Loading…</h1>
+        <p id="tagline" class="tagline"></p>
+        <p id="contact" class="contact"></p>
+        <nav id="links" class="links"></nav>
+      </div>
+    </header>
+
+    <section class="bio">
+      <p id="bio"></p>
+    </section>
+
+    <main id="sections">
+      <!-- populated by render.js -->
+    </main>
+
+    <footer class="footer">
+      <p>Built from <code>data/data.json</code> — last generated automatically.</p>
+    </footer>
+  </div>
+
+  <script src="assets/js/render.js"></script>
+</body>
+</html>

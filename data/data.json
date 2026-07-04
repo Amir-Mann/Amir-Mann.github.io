@@ -1,0 +1,147 @@
+{
+  "name": "Amir Mann",
+  "tagline": "M.Sc. student in Computer Science at the Technion, working on 3D generative AI and human motion generation.",
+  "email": "amirmann99@gmail.com",
+  "phone": "052-2812743",
+  "photo": "assets/img/profile.jpg",
+  "links": {
+    "scholar": "https://scholar.google.com/citations?user=REPLACE_ME",
+    "github": "https://github.com/Amir-Mann",
+    "linkedin": "",
+    "cv": "cv/Amir_Mann_CV.pdf"
+  },
+  "bio": "I am an M.Sc. student in Computer Science at the Technion — Israel Institute of Technology, working in LitLab under the advisement of Dr. Or Litany. My research focuses on 3D generative AI and human motion generation from 2D supervision, including alternatives to diffusion supervision and diffusion guidance, working with cameras, SMPL-X, depth, and 3D Gaussian Splatting.",
+  "self_author_matches": ["A. Mann", "Amir Mann"],
+
+  "education": [
+    {
+      "degree": "M.Sc. Computer Science",
+      "institution": "Technion — Israel Institute of Technology",
+      "dates": "2024 – Present",
+      "details": ["LitLab (3D Machine Learning), advised by Dr. Or Litany"]
+    },
+    {
+      "degree": "B.Sc. Computer Science",
+      "institution": "Technion — Israel Institute of Technology",
+      "dates": "2021 – 2024",
+      "details": ["GPA 97.9/100"]
+    },
+    {
+      "degree": "Exchange Semester",
+      "institution": "KAIST — Korea Advanced Institute of Science & Technology",
+      "dates": "Fall 2023",
+      "details": []
+    }
+  ],
+
+  "honors": [
+    { "title": "President’s Excellence Award, all 5 semesters", "dates": "" },
+    { "title": "1st in B.Sc. Graduating Class, finished 1 year early", "dates": "" },
+    { "title": "LAPIDIM Excellence Program, Technion CS Innovation Track", "dates": "" },
+    { "title": "Teaching Excellence Award ×2, Technion CS", "dates": "2025" },
+    { "title": "1st Place, SKILLZ National Coding Competition", "dates": "2017" }
+  ],
+
+  "research_experience": [
+    {
+      "role": "M.Sc. Researcher",
+      "org": "LitLab, Technion",
+      "dates": "2025 – Present",
+      "description": "Advised by Dr. Or Litany. Research in 3D generative AI and human motion generation from 2D supervision. Working on alternatives to diffusion supervision and on diffusion guidance. Working with cameras, SMPL-X, depths, 3DGS and more."
+    }
+  ],
+
+  "publications": [
+    {
+      "title": "VideoMDM: Towards 3D Human Motion Generation From 2D Supervision",
+      "authors": ["A. Mann", "G. M. Harari", "O. Litany"],
+      "venue": "Manuscript under review at NeurIPS",
+      "year": "2026",
+      "links": {}
+    },
+    {
+      "title": "SpectralSplats: Robust Differentiable Tracking via Spectral Moment Supervision",
+      "authors": ["A. Cohen Rimon", "A. Mann", "M. Ben Chen", "O. Litany"],
+      "venue": "Manuscript under review at ECCV",
+      "year": "2026",
+      "links": {
+        "arxiv": "",
+        "project": ""
+      }
+    },
+    {
+      "title": "Time-to-Move: Training-Free Motion Controlled Video Generation via Dual-Clock Denoising",
+      "authors": ["A. Singer†", "N. Rotstein†", "A. Mann", "R. Kimmel", "O. Litany"],
+      "note": "†equal contribution",
+      "venue": "ICLR",
+      "year": "2026",
+      "links": {
+        "arxiv": "",
+        "project": ""
+      }
+    }
+  ],
+
+  "teaching": [
+    {
+      "role": "Head Teaching Assistant",
+      "course": "Deep Learning",
+      "course_number": "02360781",
+      "org": "Technion, Faculty of Computer Science",
+      "dates": "Winter 2026"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Topics in Transformers & Attention",
+      "course_number": "02360004",
+      "org": "Technion, Faculty of Computer Science",
+      "dates": "Spring 2025"
+    },
+    {
+      "role": "Teaching Assistant",
+      "course": "Data Structures",
+      "course_number": "02340218",
+      "org": "Technion, Faculty of Computer Science",
+      "dates": "Spr. 2024, Win. & Spr. 2025"
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Fluid Simulation Tool",
+      "org": "Bercovici Fluidic Technologies Lab",
+      "dates": "Spring 2024",
+      "description": "Rhino/Grasshopper plugin for mesh-based fluid equilibrium simulation. Tool used in research under review at Nature Materials.",
+      "links": { "github": "" }
+    },
+    {
+      "title": "Genomic Variant Analysis",
+      "org": "Phillipa’s Lab",
+      "dates": "Spring 2024",
+      "description": "Pipeline (bcftools, GATK, plink, gnomAD) to identify rare mutations in a delayed puberty cohort.",
+      "links": {}
+    },
+    {
+      "title": "Neural Network Robustness Verification",
+      "org": "SAFE lab",
+      "dates": "Winter 2024",
+      "description": "Accelerated L0 adversarial robustness verification via regression-based dynamic strategy selection.",
+      "links": {}
+    }
+  ],
+
+  "other_experience": [
+    {
+      "role": "Intelligence Research Analyst",
+      "org": "IDF Unit 8200",
+      "dates": "2018 – 2021",
+      "description": "Data analysis across multiple independent sources. Cross-unit project leadership."
+    },
+    {
+      "role": "Coding Competition Developer",
+      "org": "Westran Digital / Ministry of Education",
+      "dates": "2017",
+      "description": "Developed SKILLZ 2018, Israel’s national high-school coding competition."
+    }
+  ]
+}

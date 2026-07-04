@@ -1,0 +1,41 @@
+name: Build CV PDF
+
+# Whenever data.json (or the generator) changes on main, rebuild
+# cv/Amir_Mann_CV.pdf and commit it back, so the download link on the
+# site always matches the latest data. GitHub Pages itself needs no
+# workflow -- it serves index.html directly from the branch.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/data.json"
+      - "cv/generate_cv.py"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-cv:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            texlive-latex-base texlive-latex-recommended texlive-latex-extra \
+            texlive-fonts-recommended
+
+      - name: Generate CV PDF
+        run: python3 cv/generate_cv.py
+
+      - name: Commit updated PDF if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cv/Amir_Mann_CV.pdf
+          git diff --cached --quiet || git commit -m "Auto-regenerate CV PDF from data.json"
+          git push
