@@ -200,11 +200,13 @@ function renderOtherExperience(data) {
   });
 }
 
+// Publications lead (right after the bio) since this page has no news
+// section to put them below -- publications are the most important thing.
 const SECTION_RENDERERS = [
+  renderPublications,
   renderEducation,
   renderHonors,
   renderResearchExperience,
-  renderPublications,
   renderTeaching,
   renderProjects,
   renderOtherExperience,

@@ -115,7 +115,7 @@
       "title": "Fluid Simulation Tool",
       "org": "Bercovici Fluidic Technologies Lab",
       "dates": "Spring 2024",
-      "description": "Rhino/Grasshopper plugin for mesh-based fluid equilibrium simulation. Tool used in research under review at Nature Materials.",
+      "description": "Rhino/Grasshopper plugin for mesh-based fluid equilibrium simulation.",
       "links": { "github": "" }
     },
     {
