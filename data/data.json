@@ -43,14 +43,7 @@
     { "title": "1st Place, SKILLZ National Coding Competition", "dates": "2017" }
   ],
 
-  "research_experience": [
-    {
-      "role": "M.Sc. Researcher",
-      "org": "LitLab, Technion",
-      "dates": "2025 – Present",
-      "description": "Advised by Dr. Or Litany. Research in 3D generative AI and human motion generation from 2D supervision. Working on alternatives to diffusion supervision and on diffusion guidance. Working with cameras, SMPL-X, depths, 3DGS and more."
-    }
-  ],
+  "research_experience": [],
 
   "publications": [
     {
