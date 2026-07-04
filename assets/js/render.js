@@ -14,6 +14,28 @@ function el(tag, opts = {}, children = []) {
   return node;
 }
 
+function escapeHtml(s) {
+  return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+// Renders inline [label](url) markdown links as real <a> tags; escapes
+// everything else. Use for any free-text field that might contain a link
+// (e.g. education details, description paragraphs).
+function mdLink(text) {
+  if (!text) return "";
+  const re = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let result = "";
+  let last = 0;
+  let m;
+  while ((m = re.exec(text))) {
+    result += escapeHtml(text.slice(last, m.index));
+    result += `<a href="${m[2]}" target="_blank" rel="noopener">${escapeHtml(m[1])}</a>`;
+    last = re.lastIndex;
+  }
+  result += escapeHtml(text.slice(last));
+  return result;
+}
+
 function linkLabel(key) {
   const labels = {
     scholar: "Google Scholar",
@@ -103,7 +125,7 @@ function renderEducation(data) {
       entryHeader(e.degree, e.institution, e.dates),
     ]);
     if (e.details && e.details.length) {
-      const ul = el("ul", {}, e.details.map(d => el("li", { text: d })));
+      const ul = el("ul", {}, e.details.map(d => el("li", { html: mdLink(d) })));
       entry.appendChild(el("div", { className: "entry-details" }, [ul]));
     }
     return entry;
@@ -125,7 +147,7 @@ function renderResearchExperience(data) {
     const entry = el("div", { className: "entry" }, [
       entryHeader(r.role, r.org, r.dates),
     ]);
-    if (r.description) entry.appendChild(el("p", { className: "entry-details", text: r.description }));
+    if (r.description) entry.appendChild(el("p", { className: "entry-details", html: mdLink(r.description) }));
     return entry;
   });
 }
@@ -173,7 +195,7 @@ function renderProjects(data) {
     const entry = el("div", { className: "entry" }, [
       entryHeader(p.title, p.org, p.dates),
     ]);
-    if (p.description) entry.appendChild(el("p", { className: "entry-details", text: p.description }));
+    if (p.description) entry.appendChild(el("p", { className: "entry-details", html: mdLink(p.description) }));
     const links = Object.entries(p.links || {}).filter(([, url]) => url);
     if (links.length) {
       const linksWrap = el("div", { className: "pub-links" });
@@ -195,7 +217,7 @@ function renderOtherExperience(data) {
     const entry = el("div", { className: "entry" }, [
       entryHeader(o.role, o.org, o.dates),
     ]);
-    if (o.description) entry.appendChild(el("p", { className: "entry-details", text: o.description }));
+    if (o.description) entry.appendChild(el("p", { className: "entry-details", html: mdLink(o.description) }));
     return entry;
   });
 }
