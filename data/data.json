@@ -48,7 +48,7 @@
   "publications": [
     {
       "title": "VideoMDM: Towards 3D Human Motion Generation From 2D Supervision",
-      "authors": ["A. Mann", "G. M. Harari", "O. Litany"],
+      "authors": ["A. Mann", "G. M. Harari", "M. Keidar", "O. Litany"],
       "venue": "Preprint",
       "year": "2026",
       "links": {
